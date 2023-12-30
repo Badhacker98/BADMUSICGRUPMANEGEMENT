@@ -9,6 +9,13 @@
       "manager",
       "Gojo",
       "Anime"
+      "python3",
+      "telegram",
+      "bot",
+      "DAXX",
+      "MusicBot",
+      "telegram-bot",
+      "pyrogram"
     ],
     "repository": "https://github.com/badmunda98/BADMANEGMENT",
     "success_url": "https://t.me/BAD_BBY_02_BOT",
@@ -28,6 +35,10 @@
         "required": true,
         "value": ""
       },
+      "STRING_SESSION": {
+        "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
+        "value": "",
+        "required": true
       "DB_URI": {
         "description": "Your MongoDB connection string.",
         "required": true,
@@ -111,6 +122,19 @@
       }
     },
     "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "stack": "container"
+  }
+  
       {
         "url":"https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
       },
